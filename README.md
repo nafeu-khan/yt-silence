@@ -1,6 +1,6 @@
 # YouTube Silence Speeder
 
-YouTube Silence Speeder is a Chrome extension that enhances your YouTube viewing experience by playing silent sections of videos at adjustable speed and volume. This allows you to save time while still enjoying the content.
+YouTube Silence Speeder is a Chrome extension that enhances your YouTube viewing experience by playing silent sections of videos at adjustable speed and volume. This allows you to save time while still enjoying the content, specially Education related video. 
 
 ## Features
 - Automatically detects silent sections in YouTube videos.
