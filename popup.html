@@ -1,41 +1,57 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <title>Silence Speeder</title>
-  <style>
-    body { font-family: sans-serif; margin: 12px; width: 240px; }
-    label { display: block; margin: 12px 0 4px; }
-    input[type=range] { width: 100%; }
-    .val { font-weight: bold; }
-    p { font-size:11px; opacity:.7; }
-  </style>
-</head>
-<body>
-  <label>
-    Silence threshold:
-    <span id="dbVal" class="val"></span> dB
-  </label>
-  <input id="sliderThreshold" type="range" min="20" max="80" value="55"/>
+  <head>
+    <meta charset="utf-8" />
+    <title>Silence Speeder</title>
+    <link rel="stylesheet" href="style.css" />
 
-  <label>
-    Silence speed:
-    <span id="speedVal" class="val"></span>×
-  </label>
-  <input id="sliderSpeed" type="range" min="1" max="10" step="0.1" value="5"/>
+  </head>
 
-  <label>
-    Silence volume:
-    <span id="volVal" class="val"></span>%
-  </label>
-  <input id="sliderVol" type="range" min="0" max="100" step="1" value="30"/>
+  <body>
+    <div class="container">
+      <h1 class ="header">Youtube Silence Speeder</h1>
+      <div class="slider-container">
+        <label>
+          Silence threshold:
+          <span id="dbVal" class="val"></span> dB
+        </label>
+        <input id="sliderThreshold" type="range" min="20" max="80" value="55" />
+      </div>
+      <div class="slider-container">
+        <label>
+          Silence speed:
+          <span id="speedVal" class="val"></span>×
+        </label>
+        <input
+          id="sliderSpeed"
+          type="range"
+          min="1"
+          max="10"
+          step="0.1"
+          value="5"
+        />
+      </div>
+      <div class="slider-container">
+        <label>
+          Silence volume:
+          <span id="volVal" class="val"></span>% 
+        </label>
+        <input
+          id="sliderVol"
+          type="range"
+          min="0"
+          max="100"
+          step="1"
+          value="30"
+        />
+      </div>
+      <ul class="info">
+        <li>Threshold ↑&rarr; includes louder audio as "silent."</li>
+        <li>Speed ↑&rarr; faster silent playback.</li>
+        <li>Volume ↓&rarr; how quiet fast-play is (0 = mute, 100 = full volume).</li>
+      </ul>
+    </div>
 
-  <p>
-    • Threshold ↑ ⇒ includes louder audio as “silent.”<br/>
-    • Speed ↑ ⇒ faster silent playback.<br/>
-    • Volume ↓ ⇒ how quiet fast-play is (0 = mute, 100 = full volume).
-  </p>
-
-  <script src="popup.js"></script>
-</body>
+    <script src="popup.js"></script>
+  </body>
 </html>
