@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Silence Speeder",
+  "version": "2.1.0",
+  "description": "Plays silent sections of YouTube videos at adjustable speed and volume.",
+  // "icons": {
+  //   "48":  "icons/48.png",
+  //   "128": "icons/128.png"
+  // },
+
+  "action": {
+    "default_title": "Silence Speeder",
+    "default_popup": "popup.html"//,
+    // "default_icon": {
+    //   "48":  "icons/48.png",
+    //   "128": "icons/128.png"
+    // }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "host_permissions": ["*://*.youtube.com/*"],
+  "permissions": ["storage", "tabs", "activeTab"]
+}

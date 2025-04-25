@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Silence Speeder</title>
+  <style>
+    body { font-family: sans-serif; margin: 12px; width: 240px; }
+    label { display: block; margin: 12px 0 4px; }
+    input[type=range] { width: 100%; }
+    .val { font-weight: bold; }
+    p { font-size:11px; opacity:.7; }
+  </style>
+</head>
+<body>
+  <label>
+    Silence threshold:
+    <span id="dbVal" class="val"></span> dB
+  </label>
+  <input id="sliderThreshold" type="range" min="20" max="80" value="55"/>
+
+  <label>
+    Silence speed:
+    <span id="speedVal" class="val"></span>×
+  </label>
+  <input id="sliderSpeed" type="range" min="1" max="10" step="0.1" value="5"/>
+
+  <label>
+    Silence volume:
+    <span id="volVal" class="val"></span>%
+  </label>
+  <input id="sliderVol" type="range" min="0" max="100" step="1" value="30"/>
+
+  <p>
+    • Threshold ↑ ⇒ includes louder audio as “silent.”<br/>
+    • Speed ↑ ⇒ faster silent playback.<br/>
+    • Volume ↓ ⇒ how quiet fast-play is (0 = mute, 100 = full volume).
+  </p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
